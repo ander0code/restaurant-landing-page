@@ -20,12 +20,12 @@ export default function Footer() {
               </div>
             </div>
             <p className="text-secondary-400 leading-relaxed mb-6">
-              Donde la tradición peruana se encuentra con la innovación culinaria. 
+              Donde la tradición peruana se encuentra con la innovación culinaria.
               Una experiencia gastronómica que despierta los sentidos.
             </p>
             {/* Social Links */}
             <div className="flex gap-3">
-              <a 
+              <a
                 href="https://instagram.com/bistrosabores"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -33,7 +33,7 @@ export default function Footer() {
               >
                 <Instagram className="w-5 h-5" />
               </a>
-              <a 
+              <a
                 href="https://facebook.com/bistrosabores"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -57,7 +57,7 @@ export default function Footer() {
                 { label: 'Contacto', href: '#contacto' },
               ].map((link) => (
                 <li key={link.href}>
-                  <a 
+                  <a
                     href={link.href}
                     className="text-secondary-400 hover:text-primary-400 transition-colors"
                   >
@@ -111,11 +111,6 @@ export default function Footer() {
                 <span>12pm - 12am</span>
               </li>
             </ul>
-            <div className="mt-6 p-4 bg-primary-600/20 rounded-xl border border-primary-500/30">
-              <p className="text-sm text-primary-300">
-                🎉 Eventos privados disponibles. ¡Contáctanos para más información!
-              </p>
-            </div>
           </div>
         </div>
       </div>
