@@ -1,14 +1,14 @@
 import { useState } from 'react';
-import { 
-  Calendar, 
-  Clock, 
-  Users, 
-  Phone, 
-  Mail, 
+import {
+  Calendar,
+  Clock,
+  Users,
+  Phone,
+  Mail,
   User,
   MessageSquare,
   CheckCircle,
-  Sparkles
+  Gift
 } from 'lucide-react';
 
 export default function Reservations() {
@@ -33,10 +33,10 @@ export default function Reservations() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
-    
+
     // Simulate API call
     await new Promise(resolve => setTimeout(resolve, 1500));
-    
+
     setIsSubmitting(false);
     setIsSubmitted(true);
   };
@@ -68,10 +68,10 @@ export default function Reservations() {
               ¡Reserva Confirmada!
             </h2>
             <p className="text-secondary-600 mb-8">
-              Gracias {formData.name}. Hemos recibido tu reserva para {formData.guests} personas 
+              Gracias {formData.name}. Hemos recibido tu reserva para {formData.guests} personas
               el día {formData.date} a las {formData.time}. Te enviaremos un correo de confirmación.
             </p>
-            <button 
+            <button
               onClick={() => {
                 setIsSubmitted(false);
                 setFormData({ name: '', email: '', phone: '', date: '', time: '', guests: '2', occasion: '', notes: '' });
@@ -90,7 +90,7 @@ export default function Reservations() {
     <section id="reservas" className="section-padding bg-white relative overflow-hidden">
       {/* Background decoration */}
       <div className="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-primary-50 to-transparent -z-10" />
-      
+
       <div className="container-custom">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           {/* Content Side */}
@@ -104,8 +104,8 @@ export default function Reservations() {
               Reserva tu <span className="text-gradient">experiencia</span>
             </h2>
             <p className="text-lg text-secondary-600 mb-8 leading-relaxed">
-              Asegura tu mesa y vive una experiencia gastronómica única. 
-              Para grupos mayores a 10 personas o eventos especiales, 
+              Asegura tu mesa y vive una experiencia gastronómica única.
+              Para grupos mayores a 10 personas o eventos especiales,
               contáctanos directamente.
             </p>
 
@@ -134,11 +134,11 @@ export default function Reservations() {
             {/* Special Note */}
             <div className="p-6 bg-gradient-to-r from-primary-50 to-accent-50 rounded-2xl border border-primary-100">
               <div className="flex items-start gap-3">
-                <Sparkles className="w-6 h-6 text-primary-600 flex-shrink-0 mt-0.5" />
+                <Gift className="w-6 h-6 text-primary-600 flex-shrink-0 mt-0.5" />
                 <div>
                   <h4 className="font-bold text-secondary-900 mb-1">¿Ocasión especial?</h4>
                   <p className="text-sm text-secondary-600">
-                    Cuéntanos y prepararemos algo especial para ti. 
+                    Cuéntanos y prepararemos algo especial para ti.
                     Decoraciones, tortas personalizadas y más.
                   </p>
                 </div>
@@ -268,7 +268,7 @@ export default function Reservations() {
                       onChange={handleChange}
                       className="input-field pl-12"
                     >
-                      {[1,2,3,4,5,6,7,8,9,10].map(num => (
+                      {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map(num => (
                         <option key={num} value={num}>{num} {num === 1 ? 'persona' : 'personas'}</option>
                       ))}
                     </select>
@@ -333,7 +333,7 @@ export default function Reservations() {
               </button>
 
               <p className="text-xs text-secondary-500 text-center">
-                Al reservar aceptas nuestros términos y condiciones. 
+                Al reservar aceptas nuestros términos y condiciones.
                 Recibirás una confirmación por correo.
               </p>
             </form>

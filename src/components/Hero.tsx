@@ -1,4 +1,4 @@
-import { ArrowRight, Sparkles, Utensils } from 'lucide-react';
+import { ArrowRight, Utensils } from 'lucide-react';
 
 export default function Hero() {
   const scrollToSection = (href: string) => {
@@ -7,12 +7,12 @@ export default function Hero() {
   };
 
   return (
-    <section 
+    <section
       id="inicio"
       className="relative min-h-[90vh] flex items-center overflow-hidden"
     >
       {/* Background Image with Overlay */}
-      <div 
+      <div
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
         style={{
           backgroundImage: `url('https://images.unsplash.com/photo-1414235077428-338989a2e8c0?q=80&w=2070&auto=format&fit=crop')`
@@ -33,7 +33,7 @@ export default function Hero() {
         <div className="max-w-3xl">
           {/* Badge */}
           <div className="inline-flex items-center gap-2 px-4 py-2 bg-white/10 backdrop-blur-sm rounded-full text-white/90 text-sm mb-8 animate-fade-in">
-            <Sparkles className="w-4 h-4 text-accent-400" />
+            <Utensils className="w-4 h-4 text-accent-400" />
             <span>Experiencia gastronómica única</span>
           </div>
 
@@ -45,7 +45,7 @@ export default function Hero() {
 
           {/* Subtitle */}
           <p className="text-xl md:text-2xl text-white/80 mb-10 leading-relaxed animate-slide-up max-w-2xl" style={{ animationDelay: '0.2s' }}>
-            Fusionamos la riqueza de la cocina peruana con técnicas contemporáneas 
+            Fusionamos la riqueza de la cocina peruana con técnicas contemporáneas
             para crear momentos inolvidables en tu paladar.
           </p>
 
@@ -88,7 +88,7 @@ export default function Hero() {
         <div className="hidden xl:block absolute right-0 top-1/2 -translate-y-1/2 animate-float">
           <div className="w-72 h-80 bg-white/10 backdrop-blur-lg rounded-3xl border border-white/20 p-6 rotate-6 shadow-2xl">
             <div className="w-full h-40 bg-gradient-to-br from-primary-500/30 to-accent-500/30 rounded-2xl mb-4 flex items-center justify-center">
-              <span className="text-6xl">🍽️</span>
+              <Utensils className="w-16 h-16 text-white/80" />
             </div>
             <h3 className="font-display text-white text-xl mb-2">Menú del Día</h3>
             <p className="text-white/70 text-sm mb-3">

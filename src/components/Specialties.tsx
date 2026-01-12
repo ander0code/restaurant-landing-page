@@ -59,7 +59,7 @@ export default function Specialties() {
             Especialidades de la Casa
           </h2>
           <p className="text-xl text-secondary-400 max-w-2xl mx-auto">
-            Creaciones exclusivas que representan lo mejor de nuestra cocina, 
+            Creaciones exclusivas que representan lo mejor de nuestra cocina,
             preparadas con técnicas de alta gastronomía.
           </p>
         </div>
@@ -67,17 +67,16 @@ export default function Specialties() {
         {/* Specialties Grid */}
         <div className="grid lg:grid-cols-3 gap-8">
           {specialties.map((item, index) => (
-            <div 
+            <div
               key={item.id}
-              className={`group relative bg-secondary-800/50 backdrop-blur-sm rounded-3xl overflow-hidden border border-secondary-700/50 hover:border-primary-500/50 transition-all duration-500 ${
-                index === 1 ? 'lg:scale-105 lg:z-10' : ''
-              }`}
+              className={`group relative bg-secondary-800/50 backdrop-blur-sm rounded-3xl overflow-hidden border border-secondary-700/50 hover:border-primary-500/50 transition-all duration-500 ${index === 1 ? 'lg:scale-105 lg:z-10' : ''
+                }`}
             >
               {/* Featured Badge for center item */}
               {index === 1 && (
                 <div className="absolute top-4 right-4 z-20">
                   <span className="px-3 py-1 bg-gradient-to-r from-primary-500 to-accent-500 text-white text-xs font-semibold rounded-full shadow-lg">
-                    ⭐ Favorito
+                    Favorito
                   </span>
                 </div>
               )}
@@ -90,7 +89,7 @@ export default function Specialties() {
                   className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-secondary-900 via-transparent to-transparent" />
-                
+
                 {/* Price Tag */}
                 <div className="absolute bottom-4 left-4">
                   <span className="px-4 py-2 bg-white/95 backdrop-blur-sm text-secondary-900 font-bold rounded-xl shadow-lg">
@@ -105,9 +104,9 @@ export default function Specialties() {
                 <div className="flex items-center gap-2 mb-3">
                   <div className="flex items-center gap-1">
                     {[...Array(5)].map((_, i) => (
-                      <Star 
-                        key={i} 
-                        className={`w-4 h-4 ${i < Math.floor(item.rating) ? 'text-accent-400 fill-accent-400' : 'text-secondary-600'}`} 
+                      <Star
+                        key={i}
+                        className={`w-4 h-4 ${i < Math.floor(item.rating) ? 'text-accent-400 fill-accent-400' : 'text-secondary-600'}`}
                       />
                     ))}
                   </div>
@@ -141,6 +140,6 @@ export default function Specialties() {
           ))}
         </div>
       </div>
-    </section>
+    </section >
   );
 }
